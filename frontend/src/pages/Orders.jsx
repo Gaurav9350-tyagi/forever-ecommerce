@@ -8,7 +8,7 @@ const Orders = () => {
   const { backendUrl, token, currency } = useContext(ShopContext);
   const [orderData, setOrderData] = useState([]);
 
-  // ================= LOAD USER ORDERS =================
+  //  LOAD USER ORDERS 
   const loadOrderData = async () => {
     try {
       if (!token) return;
@@ -56,7 +56,7 @@ const Orders = () => {
         <Title text1={'MY'} text2={'ORDERS'} />
       </div>
 
-      {/* ===== NO ORDERS ===== */}
+      
       {orderData.length === 0 ? (
         <p className="text-gray-500 text-center mt-10">
           No orders found

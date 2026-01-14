@@ -10,13 +10,13 @@ import paymentRouter from "./routes/paymentRoute.js";
 
 const app = express();
 
-// ✅ CONNECT DATABASE (SERVERLESS SAFE)
+
 const startServer = async () => {
   await connectDB();
 };
 startServer();
 
-// ✅ SAFE CORS FOR USER + ADMIN + LOCALHOST
+
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",

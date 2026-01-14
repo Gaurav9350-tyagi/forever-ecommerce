@@ -16,7 +16,7 @@ console.log("ADMIN backendUrl =", backendUrl);
 
 const App = () => {
 
-  // ✅ ADMIN TOKEN ONLY
+  
   const [adminToken, setAdminToken] = useState(
     localStorage.getItem("adminToken") || ""
   );

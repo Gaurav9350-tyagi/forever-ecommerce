@@ -68,7 +68,7 @@ const PlaceOrder = () => {
         paymentMethod: method.toUpperCase()
       };
 
-      // Map payment type to backend endpoint
+      
       const endpointMap = {
         cod: 'place',
         stripe: 'stripe',
@@ -104,7 +104,7 @@ const PlaceOrder = () => {
       onSubmit={onSubmitHandler}
       className='flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t'
     >
-      {/* LEFT */}
+      
       <div className='flex flex-col gap-4 w-full sm:max-w-[480px]'>
         <div className='text-xl sm:text-2xl my-3'>
           <Title text1={'DELIVERY'} text2={'INFORMATION'} />
@@ -131,7 +131,7 @@ const PlaceOrder = () => {
         <input required name='phone' onChange={onChangeHandler} className='border p-2 w-full' placeholder='Phone' />
       </div>
 
-      {/* RIGHT */}
+      
       <div className='mt-8'>
         <CartTotal />
 

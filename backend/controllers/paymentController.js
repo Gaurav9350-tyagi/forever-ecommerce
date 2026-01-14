@@ -1,9 +1,4 @@
-// MOCK Razorpay Controller (College Project)
-// No real Razorpay SDK, No crypto verification
 
-// =======================
-// CREATE RAZORPAY ORDER (MOCK)
-// =======================
 export const createRazorpayOrder = async (req, res) => {
   try {
     const { amount } = req.body;

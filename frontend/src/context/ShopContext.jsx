@@ -20,7 +20,7 @@ const ShopContextProvider = (props) => {
 
     const navigate = useNavigate();
 
-    // ================= PRODUCTS =================
+    //  PRODUCTS
     const getProductsData = async () => {
         try {
             const response = await axios.get(backendUrl + '/api/product/list');
@@ -34,7 +34,7 @@ const ShopContextProvider = (props) => {
         }
     };
 
-    // ================= CART =================
+    //  CART 
     const addToCart = async (itemId, size) => {
         if (!size) {
             toast.error('Select Product Size');
@@ -109,7 +109,7 @@ const ShopContextProvider = (props) => {
         }
     };
 
-    // ================= EFFECTS =================
+    // EFFECTS 
     useEffect(() => {
         getProductsData();
     }, []);
@@ -125,7 +125,7 @@ const ShopContextProvider = (props) => {
         }
     }, [token]);
 
-    // ================= CONTEXT VALUE =================
+    //CONTEXT VALUE 
     const value = {
         products,
         currency,

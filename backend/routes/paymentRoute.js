@@ -2,7 +2,6 @@ import express from "express";
 
 const paymentRouter = express.Router();
 
-// Razorpay disabled for MOCK / college project
 paymentRouter.post("/razorpay/order", (req, res) => {
   return res.json({
     success: true,

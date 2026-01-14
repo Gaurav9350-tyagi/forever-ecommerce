@@ -1,6 +1,6 @@
 let razorpayInstance = null;
 
-// Initialize ONLY if real keys are present (future use)
+
 if (
   process.env.RAZORPAY_KEY_ID &&
   process.env.RAZORPAY_KEY_SECRET &&

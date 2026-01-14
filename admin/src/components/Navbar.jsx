@@ -4,8 +4,8 @@ import { assets } from '../assets/assets';
 const Navbar = ({ setAdminToken }) => {
 
   const logoutHandler = () => {
-    localStorage.removeItem("adminToken"); // ✅ remove admin token
-    setAdminToken("");                     // ✅ update state
+    localStorage.removeItem("adminToken"); 
+    setAdminToken("");                     
   };
 
   return (

@@ -20,25 +20,25 @@ const adminOrders = async (req, res) => {
 // ================= PLACE ORDER (USER) =================
 const placeOrder = async (req, res) => {
   try {
-    // ✅ GET USER ID FROM JWT (AUTH MIDDLEWARE)
+    
     const userId = req.user._id;
 
     const { items, amount, address, paymentMethod } = req.body;
 
     const newOrder = new orderModel({
-      userId,                  // ✅ FIXED
+      userId,                  
       items,
       address,
       amount,
       paymentMethod,
-      payment: true,            // MOCK PAYMENT SUCCESS
+      payment: true,            
       status: "Placed",
       date: Date.now()
     });
 
     await newOrder.save();
 
-    // ✅ CLEAR USER CART
+    
     await userModel.findByIdAndUpdate(userId, { cartData: {} });
 
     res.json({
@@ -72,7 +72,7 @@ const allOrders = async (req, res) => {
 // ================= USER: OWN ORDERS =================
 const userOrders = async (req, res) => {
   try {
-    // ✅ USER ID FROM JWT
+    
     const userId = req.user._id;
 
     const orders = await orderModel.find({ userId });

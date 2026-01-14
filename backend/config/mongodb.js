@@ -14,7 +14,7 @@ const connectDB = async () => {
   if (!cached.promise) {
     cached.promise = mongoose.connect(process.env.MONGODB_URI, {
       dbName: "ecommerce",
-      bufferCommands: true,          // ✅ allow buffering
+      bufferCommands: true,          
       serverSelectionTimeoutMS: 10000
     }).then((mongoose) => {
       return mongoose;
