@@ -26,15 +26,10 @@ const PlaceOrder = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // ================= PLACE ORDER (MOCK) =================
+  
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-    // const userId = localStorage.getItem("userId");
-
-    // if (!userId) {
-    //   toast.error("Please login again");
-    //   return;
-    // }
+    
 
     if (!method) {
       toast.error("Please select a payment method");
@@ -43,7 +38,7 @@ const PlaceOrder = () => {
 
     try {
         const userId =localStorage.getItem('userId')
-      // Prepare order items
+      
       let orderItems = [];
       for (const productId in cartItems) {
         for (const size in cartItems[productId]) {
@@ -61,7 +56,7 @@ const PlaceOrder = () => {
       }
 
       const orderData = {
-        //userId,
+        
         items: orderItems,
         amount: getCartAmount() + delivery_fee,
         address: formData,

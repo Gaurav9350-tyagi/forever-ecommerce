@@ -21,9 +21,7 @@ export const createRazorpayOrder = async (req, res) => {
   }
 };
 
-// =======================
-// VERIFY RAZORPAY PAYMENT (MOCK)
-// =======================
+
 export const verifyRazorpayPayment = async (req, res) => {
   try {
     return res.status(200).json({

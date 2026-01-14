@@ -1,7 +1,7 @@
 import orderModel from "../models/orderModel.js";
 import userModel from "../models/userModel.js";
 
-// ================= ADMIN: ALL ORDERS =================
+
 const adminOrders = async (req, res) => {
   try {
     const orders = await orderModel.find({}).sort({ createdAt: -1 });
@@ -17,7 +17,7 @@ const adminOrders = async (req, res) => {
   }
 };
 
-// ================= PLACE ORDER (USER) =================
+
 const placeOrder = async (req, res) => {
   try {
     
@@ -55,7 +55,7 @@ const placeOrder = async (req, res) => {
   }
 };
 
-// ================= ADMIN: ALL ORDERS (ALT) =================
+
 const allOrders = async (req, res) => {
   try {
     const orders = await orderModel.find({});
@@ -69,7 +69,7 @@ const allOrders = async (req, res) => {
   }
 };
 
-// ================= USER: OWN ORDERS =================
+
 const userOrders = async (req, res) => {
   try {
     
@@ -89,7 +89,7 @@ const userOrders = async (req, res) => {
   }
 };
 
-// ================= ADMIN: UPDATE STATUS =================
+
 const updateStatus = async (req, res) => {
   try {
     const { orderId, status } = req.body;

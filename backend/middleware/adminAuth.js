@@ -4,7 +4,7 @@ const adminAuth = async (req, res, next) => {
   try {
     const token = req.headers.token;
 
-    console.log("ADMIN AUTH TOKEN RECEIVED:", token); // 🔍 DEBUG
+    console.log("ADMIN AUTH TOKEN RECEIVED:", token); 
 
     if (!token) {
       return res.json({
@@ -15,7 +15,7 @@ const adminAuth = async (req, res, next) => {
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    console.log("ADMIN AUTH DECODED:", decoded); // 🔍 DEBUG
+    console.log("ADMIN AUTH DECODED:", decoded); 
 
     if (!decoded.admin) {
       return res.json({

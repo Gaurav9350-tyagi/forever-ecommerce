@@ -8,11 +8,11 @@ const Orders = () => {
   const { backendUrl, token, currency } = useContext(ShopContext);
   const [orderData, setOrderData] = useState([]);
 
-  //  LOAD USER ORDERS 
+   
   const loadOrderData = async () => {
     try {
       if (!token) return;
-      //console.log("USER ID:", userId);
+      
 
       const response = await axios.post(
         backendUrl + '/api/order/userorders',
